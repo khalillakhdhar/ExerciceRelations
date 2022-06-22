@@ -9,7 +9,6 @@ import com.doranco.relations.model.Article;
 import com.doranco.relations.repository.ArticleRepository;
 //un service est une classe auto-injectable dans d'autres beans (classe java)
 @Service
-
 public class ArticleServiceImplement implements ArticleServiceInterface {
 
 	@Autowired

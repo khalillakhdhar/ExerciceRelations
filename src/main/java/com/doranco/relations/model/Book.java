@@ -50,6 +50,10 @@ public class Book implements Serializable {
 		this.author = author;
 		this.price = price;
 	}
+	@Override
+	public String toString() {
+		return "Book [bookid=" + bookid + ", bookname=" + bookname + ", author=" + author + ", price=" + price + "]";
+	}
 	
 	
 	

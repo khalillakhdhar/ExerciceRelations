@@ -6,6 +6,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
+//dois être un bean
+// un bean (classe java qui hérite de object avec au moins un constructeur vide [par defaut])
+// injectable (on peut l'appler via l'expression Autowired)
+//scannable l'application le connais grâce à son annotation
 public class Article {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)

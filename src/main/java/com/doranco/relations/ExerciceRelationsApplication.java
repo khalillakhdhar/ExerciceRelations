@@ -6,12 +6,16 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.doranco.relations.model.Article;
+import com.doranco.relations.model.Book;
 import com.doranco.relations.service.ArticleServiceImplement;
+import com.doranco.relations.service.BookServiceImplement;
 
 @SpringBootApplication
 public class ExerciceRelationsApplication implements CommandLineRunner {
 @Autowired
 ArticleServiceImplement articleService;
+@Autowired
+BookServiceImplement booksapi;
 	
 	public static void main(String[] args) {
 		
@@ -32,7 +36,14 @@ ArticleServiceImplement articleService;
 		System.out.println(a.toString());	
 		}
 		);
-		
+		Book b1=new Book("UML2 par la pratique", "Jhon weid", 20);
+		Book b2=new Book("java EE the full guide", "Oussama Saidi", 40);
+		booksapi.createOneBook(b1);
+		booksapi.createOneBook(b2);
+		booksapi.findBooks().forEach( bk->{
+			System.out.println(bk.toString());
+		}
+		);
 		
 		
 		
