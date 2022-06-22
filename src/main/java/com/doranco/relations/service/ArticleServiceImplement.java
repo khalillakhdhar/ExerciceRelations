@@ -1,6 +1,7 @@
 package com.doranco.relations.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -46,6 +47,13 @@ public class ArticleServiceImplement implements ArticleServiceInterface {
 	public List<Article> searchType(String type) {
 		// TODO Auto-generated method stub
 		return articleRepository.findByType(type);
+	}
+
+	@Override
+	//Optional => Article || null
+	public Optional<Article> findOneArticle(long id) {
+		// TODO Auto-generated method stub
+		return articleRepository.findById(id);
 	}
 
 }

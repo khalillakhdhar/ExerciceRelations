@@ -1,6 +1,7 @@
 package com.doranco.relations.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.doranco.relations.model.Article;
 // on utilise ce genre d'interface pour des raisons d'organisation
@@ -14,5 +15,6 @@ public interface ArticleServiceInterface {
 	void DeleteArticle(long id);
 	List<Article> searchAuteur(String auteur);
 	List<Article> searchType(String type);
+	Optional<Article> findOneArticle(long id);
 
 }
